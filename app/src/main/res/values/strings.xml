@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">pietjesbakSpel</string>
+    <string name="app_name">Pietjesbak game</string>
+    <string name="player_one">Player 1</string>
+    <string name="player_two">Player 2</string>
+    <string name="msg_error_nickname">Fill in a nickname</string>
+    <string name="et_hint">Enter a nickname</string>
+    <string name="button_play">PLAY</string>
 </resources>
