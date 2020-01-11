@@ -8,9 +8,13 @@ import android.widget.TextView;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String ERR_PLAYER1_VISIBILITY = "err_player1_visibility";
+    private static final String ERR_PLAYER2_VISIBILITY = "err_player2_visibility";
 
     //Fields that will store button, inputs and errormsg
     private EditText etPlayer1;
@@ -53,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (savedInstanceState != null) {
+            int errPlayer1Visible = savedInstanceState.getInt(ERR_PLAYER1_VISIBILITY);
+            int errPlayer2Visible = savedInstanceState.getInt(ERR_PLAYER2_VISIBILITY);
+
+            errMsgPlayer1.setVisibility(errPlayer1Visible);
+            errMsgPlayer2.setVisibility(errPlayer2Visible);
+        }
     }
 
     private void showErrorMsg(String usernPlayer1, String usernPlayer2){
@@ -60,11 +72,23 @@ public class MainActivity extends AppCompatActivity {
 
         if(usernPlayer1.trim().equals("")) errMsgPlayer1.setVisibility(View.VISIBLE);
 
-        if(usernPlayer1.trim().equals("")) errMsgPlayer1.setVisibility(View.VISIBLE);
+        if(usernPlayer2.trim().equals("")) errMsgPlayer2.setVisibility(View.VISIBLE);
     }
 
     private void hideErrorMsg(){
         errMsgPlayer1.setVisibility(View.INVISIBLE);
         errMsgPlayer2.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        //Save the visiblity of error messages
+        int errPlayer1Visible = errMsgPlayer1.getVisibility();
+        outState.putInt(ERR_PLAYER1_VISIBILITY,errPlayer1Visible);
+
+        int errPlayer2Visible = errMsgPlayer2.getVisibility();
+        outState.putInt(ERR_PLAYER2_VISIBILITY,errPlayer2Visible);
     }
 }
