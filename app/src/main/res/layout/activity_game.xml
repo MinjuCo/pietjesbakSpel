@@ -9,9 +9,19 @@
 
     <TextView
         android:id="@+id/tv_username1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/player_one"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:id="@+id/tv_player1_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:textSize="22sp"
         android:layout_marginBottom="20dp"
         />
@@ -24,6 +34,19 @@
         android:layout_below="@+id/tv_username1"
         android:layout_marginBottom="20dp"
         />
+
+    <TextView
+        android:id="@+id/tv_player2_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_player1_score"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"
+        />
+
     <TextView
         android:id="@+id/gameTitle"
         android:layout_width="match_parent"
@@ -78,7 +101,7 @@
         android:layout_centerInParent="true">
 
         <Button
-            android:id="@+id/btn_player1"
+            android:id="@+id/btn_skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dices"
@@ -101,6 +124,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/testButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
