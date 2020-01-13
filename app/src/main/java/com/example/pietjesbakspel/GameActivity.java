@@ -732,7 +732,7 @@ public class GameActivity extends AppCompatActivity{
                     p2LiveList.remove(viewHolder.getAdapterPosition());
                     mAdapter2.notifyDataSetChanged();
                 }else{
-                    mAdapter.notifyDataSetChanged();
+                    mAdapter2.notifyDataSetChanged();
                 }
 
 
