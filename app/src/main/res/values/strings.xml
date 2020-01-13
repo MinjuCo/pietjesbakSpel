@@ -8,4 +8,6 @@
     <string name="player1_turn">Player one\'s turn</string>
     <string name="player2_turn">Player two\'s turn</string>
     <string name="tie">It\'s a tie</string>
+    <string name="share">Share</string>
+    <string name="reset">Reset</string>
 </resources>
