@@ -15,19 +15,33 @@
         android:textSize="22sp"
         android:layout_marginBottom="20dp"
         />
+
+    <TextView
+        android:id="@+id/tv_player1_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_username1"
+        android:layout_toRightOf="@+id/tv_username1"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"
+        />
+
     <TextView
         android:id="@+id/tv_player1_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="7"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/tv_player1_live"
+        android:layout_toRightOf="@+id/tv_player1_live"
         android:textSize="22sp"
+        android:gravity="end"
         android:layout_marginBottom="20dp"
         />
+
     <TextView
         android:id="@+id/tv_username2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/player_two"
         android:textSize="22sp"
@@ -36,14 +50,27 @@
         />
 
     <TextView
+        android:id="@+id/tv_player2_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/tv_username2"
+        android:layout_toRightOf="@+id/tv_username2"
+        android:layout_below="@+id/tv_player1_live"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
         android:id="@+id/tv_player2_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="7"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tv_player1_score"
+        android:layout_toEndOf="@+id/tv_player2_live"
+        android:layout_toRightOf="@+id/tv_player2_live"
         android:textSize="22sp"
+        android:gravity="end"
         android:layout_marginBottom="20dp"
         />
 

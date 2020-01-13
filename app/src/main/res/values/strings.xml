@@ -5,4 +5,7 @@
     <string name="msg_error_nickname">Fill in a nickname</string>
     <string name="et_hint">Enter a nickname</string>
     <string name="button_play">PLAY</string>
+    <string name="player1_turn">Player one\'s turn</string>
+    <string name="player2_turn">Player two\'s turn</string>
+    <string name="tie">It\'s a tie</string>
 </resources>
